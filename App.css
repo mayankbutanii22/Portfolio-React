@@ -1,0 +1,288 @@
+/* Base styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+a {
+  text-decoration: none;
+  color: inherit
+}
+
+/* Navbar styles */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #0077ff;
+  
+  color: white;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+nav li {
+  font-weight: 500;
+}
+
+/* Container Styling */
+section {
+  text-align: center;
+  background-color: #fff;
+  background: linear-gradient(pink 100%, darkcyan 100%, #0077ff 100%);
+  max-width: auto;
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Header */
+section h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+section p {
+  font-size: 1.5rem;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* List Items */
+section ul li {
+  font-size: 20px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  border-radius: 20px;
+  padding: 10px;
+  list-style: none;
+  background-color:#222222;
+  color: #fff;
+}
+
+section ul li strong {
+  color:black;
+  font-weight: 600;
+  font-size: 25px;
+  text-align: center;
+}
+
+/* Nested Project List */
+section ul li ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+section ul li ul li{
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+/* Link Styling */
+section a {
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+section li a:hover {
+  color: #004a99;
+  text-decoration: none;
+}
+
+/* Download Resume Link */
+section a[download] {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+section a[download]:hover {
+  color: #0077ff;
+}
+
+
+section ul{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: darkslateblue;
+  font-size: 0.9rem;
+  color:  #fff;
+}
+
+.dark-mode footer {
+  background-color: darkslateblue;
+  color: #fff;
+}
+footer p {
+  font-size: 1rem;
+}
+/* Style for the form container */
+form {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px;
+  background-color: #f4f4f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 1rem;
+  text-align: left;
+}
+
+/* Style for the input fields and textarea */
+input[type="text"], textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  background-color: #fff;
+}
+
+textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+/* Style for the submit button */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #45a049;
+}
+
+
+
+
+/* ----------- Large devices (Desktops, 1440px and up) ----------- */
+@media screen and (min-width: 1440px) {
+  section ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  section h1 {
+    font-size: 3rem;
+  }
+
+  section p {
+    font-size: 1.5rem;
+  }
+}
+
+/* ----------- Medium devices (Laptops, 1024px to 1439px) ----------- */
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  section ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  nav {
+    padding: 1rem 1.5rem;
+  }
+}
+
+/* ----------- Tablets (768px to 1023px) ----------- */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  nav ul {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  section ul {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 2rem 1.5rem;
+  }
+
+  form {
+    padding: 30px;
+  }
+}
+
+/* ----------- Small devices (Mobiles, up to 767px) ----------- */
+@media screen and (max-width: 767px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    gap: 0.5rem;
+  }
+
+  nav li {
+    padding: 0.5rem 0;
+  }
+
+  section ul {
+    grid-template-columns: 1fr;
+  }
+
+  section h1 {
+    font-size: 2rem;
+  }
+
+  section p {
+    font-size: 1.2rem;
+  }
+
+  form {
+    padding: 20px;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  input[type="text"],
+  textarea {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
+
